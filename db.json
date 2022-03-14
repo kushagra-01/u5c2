@@ -91,6 +91,17 @@
       "ownerName": "f",
       "name": "f",
       "id": 9
+    },
+    {
+      "name": "kamal",
+      "ownerName": "3",
+      "address": "3",
+      "areaCode": "3",
+      "rent": "3",
+      "bachelor": "on",
+      "married": "on",
+      "image": "3",
+      "id": 10
     }
   ]
 }
