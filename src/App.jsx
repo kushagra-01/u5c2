@@ -1,5 +1,5 @@
 import "./App.css";
-// import { Rentals } from "./Components/Rentals/Rentals";
+import { Rentals } from "./Components/Rentals/Rentals";
 import { AddHouse } from "./Components/AddHouse/AddHouse";
 
 function App() {
@@ -8,7 +8,10 @@ function App() {
       <button className="toggleForm">
       {<AddHouse/>}
       </button>
-      {/* Show component based on state */}
+      <button>
+      {Rentals}
+      </button>
+     
       <br />
     </div>
   );

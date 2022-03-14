@@ -81,6 +81,16 @@
       "bachelor": "on",
       "image": "2",
       "id": 8
+    },
+    {
+      "image": "df",
+      "bachelor": "on",
+      "rent": "f",
+      "areaCode": "f",
+      "address": "f",
+      "ownerName": "f",
+      "name": "f",
+      "id": 9
     }
   ]
 }

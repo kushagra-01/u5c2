@@ -1,6 +1,20 @@
 import "./Rentals.css";
-
+import axios from "axios";
+import { useEffect, useState } from "react";
 export const Rentals = () => {
+
+  const [db,setdb]=useState([])
+  const getFormdata =(e)=>{
+ 
+    axios.get("http://localhost:8080/houses").then((r)=>{
+      console.log(r)
+   setdb([...r.data,db])
+    })
+  }
+  
+getFormdata()
+
+
   return (
     <div className="rentalContainer">
       <div className="sortingButtons">
@@ -29,7 +43,7 @@ export const Rentals = () => {
           </tr>
         </thead>
         <tbody>
-          {[].map((house, index) => {
+          {db.map((house, index) => {
             return (
               <tr key={house.id} className="houseDetails">
                 <td className="houseId">{house.id}</td>
