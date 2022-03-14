@@ -8,13 +8,18 @@ const [tt,settt]= useState(true);
 
   return (
     <div className="App">
+
+      return(
       <button className="toggleForm" onclick={()=>tt?settt(false):settt(true)}>
      {tt?<Rentals/>:<AddHouse/>} 
+
+     fkeoijsubb
       </button>
-     
+     {tt?<Rentals/>:<AddHouse/>}
      
       <br />
     </div>
+  
   );
 }
 
