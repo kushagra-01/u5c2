@@ -1,3 +1,86 @@
 {
-  
+  "houses": [
+    {
+      "name": "kushagra",
+      "ownerName": "11",
+      "address": "22",
+      "areaCode": "22",
+      "rent": "2",
+      "bachelor": "on",
+      "married": "on",
+      "image": "2",
+      "id": 1
+    },
+    {
+      "name": "kushagra",
+      "ownerName": "11",
+      "address": "11",
+      "areaCode": "1",
+      "rent": "1",
+      "bachelor": "on",
+      "image": "1",
+      "id": 2
+    },
+    {
+      "name": "kushagra",
+      "ownerName": "3",
+      "areaCode": "3",
+      "address": "3",
+      "rent": "3",
+      "bachelor": "on",
+      "image": "3",
+      "id": 3
+    },
+    {
+      "name": "kushagra",
+      "ownerName": "2",
+      "address": "2",
+      "areaCode": "2",
+      "rent": "2",
+      "bachelor": "on",
+      "image": "2",
+      "id": 4
+    },
+    {
+      "name": "kushagra",
+      "ownerName": "f",
+      "address": "2",
+      "areaCode": "22",
+      "rent": "2",
+      "bachelor": "on",
+      "married": "on",
+      "image": "e",
+      "id": 5
+    },
+    {
+      "name": "kushagra",
+      "ownerName": "2",
+      "address": "2",
+      "areaCode": "22",
+      "rent": "2",
+      "bachelor": "on",
+      "image": "2",
+      "id": 6
+    },
+    {
+      "name": "kushagra",
+      "ownerName": "2",
+      "address": "2",
+      "areaCode": "2",
+      "rent": "2",
+      "bachelor": "on",
+      "image": "2",
+      "id": 7
+    },
+    {
+      "name": "kushagra",
+      "ownerName": "2",
+      "address": "2",
+      "areaCode": "22",
+      "rent": "2",
+      "bachelor": "on",
+      "image": "2",
+      "id": 8
+    }
+  ]
 }
