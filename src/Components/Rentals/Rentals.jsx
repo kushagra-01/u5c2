@@ -1,28 +1,46 @@
-import "./Rentals.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-export const Rentals = () => {
+import "./Rentals.css";
 
-  const [db,setdb]=useState([])
-  const getFormdata =(e)=>{
- 
-    axios.get("http://localhost:8080/houses").then((r)=>{
-      console.log(r)
-   setdb([...r.data,db])
+export const Rentals = () => {
+  const [showTable, setShowTable] = useState([]);
+  // const [a, setA] = useState([]);
+  useEffect(()=>{
+     getData()
+  },[])
+  const getData=(value)=>{
+    axios.get("http://localhost:8080/houses").then(res=>{
+      setShowTable(res.data)
     })
   }
-  
-getFormdata()
-
-
   return (
     <div className="rentalContainer">
       <div className="sortingButtons">
-        <button className="sortById">Sort by ID</button>
-        <button className="sortByRentAsc">Rent Low to high</button>
-        <button className="sortByRentDesc">Rent High to low</button>
-        <button className="sortByAreaAsc">Area Low to high</button>
-        <button className="sortByAreaDesc">Area High to Low</button>
+        <button  onClick={(()=>{
+        return (setShowTable([...showTable.sort((a,b)=>a.id-b.id)]))
+      })} className="sortById">Sort by ID</button>
+        <button 
+            onClick={(()=>{
+              return (setShowTable([...showTable.sort((a,b)=>a.rent-b.rent)]))
+            })}
+        className="sortByRentAsc">Rent Low to high</button>
+        <button
+            onClick={(()=>{
+              return (setShowTable([...showTable.sort((a,b)=>b.rent-a.rent)]))
+            })}
+        className="sortByRentDesc">Rent High to low</button>
+        <button  
+        
+        
+        onClick={(()=>{
+          return (setShowTable([...showTable.sort((a,b)=>a.areaCode-b.areaCode)]))
+        })}
+        className="sortByAreaAsc">Area Low to high</button>
+        <button 
+          onClick={(()=>{
+            return (setShowTable([...showTable.sort((a,b)=>b.areaCode-a.areaCode)]))
+          })}
+        className="sortByAreaDesc">Area High to Low</button>
       </div>
       <input
         className="searchAddress"
@@ -43,7 +61,7 @@ getFormdata()
           </tr>
         </thead>
         <tbody>
-          {db.map((house, index) => {
+          {showTable.map((house, index) => {
             return (
               <tr key={house.id} className="houseDetails">
                 <td className="houseId">{house.id}</td>
@@ -53,7 +71,7 @@ getFormdata()
                 <td className="areaCode">{house.areaCode}</td>
                 <td className="rent">{house.rent}</td>
                 <td className="preferredTenants">
-                  {/* Show text Both or Bachelors or Married based on values */}
+                  {house.preferredTenant}
                 </td>
                 <td className="houseImage">
                   <img src={house.image} alt="house" />
